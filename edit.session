@@ -1,0 +1,239 @@
+let SessionLoad = 1
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/Programming/rust/advent_of_code_2022
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+let s:shortmess_save = &shortmess
+if &shortmess =~ 'A'
+  set shortmess=aoOA
+else
+  set shortmess=aoO
+endif
+badd +1 day1/src/main.rs
+badd +0 day2/src/main.rs
+badd +0 day3/src/main.rs
+badd +0 day4/src/main.rs
+badd +0 day5/src/main.rs
+badd +0 day6/src/main.rs
+badd +0 day7/src/main.rs
+badd +0 day8/src/main.rs
+badd +0 day9/src/main.rs
+argglobal
+%argdel
+$argadd day1/src/main.rs
+$argadd day2/src/main.rs
+$argadd day3/src/main.rs
+$argadd day4/src/main.rs
+$argadd day5/src/main.rs
+$argadd day6/src/main.rs
+$argadd day7/src/main.rs
+$argadd day8/src/main.rs
+$argadd day9/src/main.rs
+set stal=2
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabnew +setlocal\ bufhidden=wipe
+tabrewind
+edit day1/src/main.rs
+argglobal
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day1 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day2/src/main.rs
+argglobal
+2argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day2 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day3/src/main.rs
+argglobal
+3argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day3 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day4/src/main.rs
+argglobal
+4argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day4 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day5/src/main.rs
+argglobal
+5argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day5 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day6/src/main.rs
+argglobal
+6argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day6 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day7/src/main.rs
+argglobal
+7argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day7 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day8/src/main.rs
+argglobal
+8argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day8 | endif
+tabnext
+edit ~/Programming/rust/advent_of_code_2022/day9/src/main.rs
+argglobal
+9argu
+balt ~/Programming/rust/advent_of_code_2022/day1/src/main.rs
+setlocal fdm=expr
+setlocal fde=nvim_treesitter#foldexpr()
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 1 - ((0 * winheight(0) + 24) / 49)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+if exists(':tcd') == 2 | tcd ~/Programming/rust/advent_of_code_2022/day9 | endif
+tabnext 9
+set stal=1
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20
+let &shortmess = s:shortmess_save
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if filereadable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
